@@ -19,7 +19,7 @@ The code is tested in python 3.7.8 and macOS Catalina
 
 
 running over an image
-<pre><code>python Face_info.py --input image --path_im data_test/friends.jpg </code></pre>
+<pre><code>python Face_info.py --input image --path_im data_test/test.jpg </code></pre>
 
 
 # Add new faces to the database (facial recognition)
