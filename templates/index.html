@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vietnamese Recognition</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recognition App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #87CEEB, #8A2BE2);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .buttons-container {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4B0082; /* Violet color */
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #1E90FF; /* Sky color */
+        }
+        a {
+		  color: white;
+		  text-decoration: none;
+		}
+    </style>
 </head>
 <body>
-    <h1>Vietnamese Recognition</h1>
-    <img src="{{ url_for('video_feed') }}" width="720" height="480">
+    <h1>AI Vietnamese Recognition App</h1>
+    <div class="buttons-container">
+        <button class="button" onclick="startCameraRecognition()">
+            <a href="/camera_mode">By Cam</a>
+        </button>
+        <button class="button" onclick="selectImageRecognition()">
+            <a href="/image_mode">By Image</a>
+        </button>
+    </div>
+
+    <script>
+        function startCameraRecognition() {
+            window.location.href = "/camera_mode";
+        }
+    
+        function selectImageRecognition() {
+            window.location.href = "/image_mode";
+        }
+    </script>
+    
 </body>
 </html>

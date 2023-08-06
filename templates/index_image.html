@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vietnamese Recognition - Image Mode</title>
+	<title>Image Upload and Display</title>
+	<style>
+		body {
+		  	font-family: Arial, sans-serif;
+			text-align: center;
+			background: linear-gradient(to bottom, #87CEEB, #8A2BE2);
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+		  	color: white;
+		  	display: flex;
+            flex-direction: column;
+            align-items: center;
+		}
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+		#imageUploadForm {
+		  width: 80%;
+		}
+
+		#imageUploadForm label,
+		#imageUploadForm input {
+		  display: block;
+		  margin: 3px;
+		}
+
+		#imageDisplay {
+		  width: 80%;
+		  margin: 0 auto;
+		}
+
+		button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4B0082; /* Violet color */
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1E90FF; /* Sky color */
+        }
+
+		a {
+		  color: white;
+		  text-decoration: none;
+		}
+	</style>
 </head>
 <body>
-    <h1>Vietnamese Recognition - Image Mode</h1>
-    <form method="post" action="/">
-        <input type="submit" name="back" value="Back">
+	<h1>Vietnamese Recognition - Image Mode</h1>
+	
+
+<div>
+    <form id="imageUploadForm" enctype="multipart/form-data" method="POST" action="/image_mode">
+        <label for="imageFile">Upload an image:</label><br>
+        <input type="file" id="imageFile" name="imageFile"><br><br>
+        <input type="submit" value="Result">
     </form>
+</div>
+
+<div id="imageDisplay">
+    <img src="{{ image_path }}" style="max-width: 600px;"><br><br>
+</div>
+
+
+<button>
+    <a href="/">Back</a>
+</button>
+
+
+
 </body>
 </html>

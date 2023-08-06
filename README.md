@@ -14,14 +14,7 @@ This implementation allows recognition of multiple faces and the registration of
 
 # How to run:
 The code is tested in python 3.7.8 and macOS Catalina
-<pre><code>python Face_info.py --input webcam </code></pre>
-
-
-
-running over an image
-<pre><code>python Face_info.py --input image --path_im data_test/test.jpg </code></pre>
-
-
-# Add new faces to the database (facial recognition)
-You can add new users to the faces database simply by adding the person's photo in the **images_db** folder, for the registry to work correctly, only the person of interest should appear in the photo.
+First move to the root of project and run below code
+<pre><code> flask run</code></pre>
+After that, we turn on the local web by the adress "http://127.0.0.1:5000/"
 
